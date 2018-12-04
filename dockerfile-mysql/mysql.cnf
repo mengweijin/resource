@@ -1,4 +1,4 @@
-# Copyright (c) 2015, 2016, Oracle and/or its affiliates. All rights reserved.
+x# Copyright (c) 2015, 2016, Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License, version 2.0,
@@ -33,5 +33,14 @@ default-character-set=utf8mb4
 default-character-set=utf8mb4
 
 [mysqld]
-# 修改默认密码验证方式插件，以兼容navicat等不支持caching_sha2_password验证方式的客户端工具，这将放弃提供的改进的身份验证安全性 caching_sha2_password
+# 修改默认密码验证方式插件，以兼容navicat等不支持caching_sha2_password验证方式的客户端工具，
+# 这将放弃提供的改进的身份验证安全性 caching_sha2_password
 default_authentication_plugin=mysql_native_password
+# 修改mysql默认最大连接数（默认：151）
+max_connections=1000
+#
+# 当二进制日志启用后，这个变量就会启用。它控制是否可以信任存储函数创建者，不会创建写入二进制日志引起不安全事件的存储函数。
+# 如果设置为0（默认值），用户不得创建或修改存储函数，除非它们具有除CREATE ROUTINE或ALTER ROUTINE特权之外的SUPER权限。
+# 设置为0还强制使用DETERMINISTIC特性或READS SQL DATA或NO SQL特性声明函数的限制。
+# 如果变量设置为1，MySQL不会对创建存储函数实施这些限制。 此变量也适用于触发器的创建。
+log-bin-trust-function-creators=1
