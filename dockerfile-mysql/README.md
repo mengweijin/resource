@@ -31,6 +31,23 @@ docker run \
 
 -e MYSQL_PASSWORD=myboot \：指定 app_master 数据库的 appmaster 用户的密码为 appmaster
 
+#### 创建数据库、用户并授权
+```
+创建数据库：
+mysql> create database test_database;
+
+创建用户（joe）：
+mysql> CREATE USER 'joe'@'%' IDENTIFIED BY '123456';
+或者只能本地主机登录方式创建：
+mysql> CREATE USER 'joe'@'localhost' IDENTIFIED BY '123456';
+
+授权：
+mysql> grant all privileges on test_database.* to 'joe'@'localhost' identified by '123456';
+
+刷新权限：
+mysql> flush privileges;
+```
+
 #### 编码说明：当前镜像使用utf8mb4编码
 
 #### 注意：当前镜像修改了默认身份验证插件为 mysql_native_password 以兼容客户端工具的连接。
