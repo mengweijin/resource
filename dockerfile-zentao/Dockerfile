@@ -22,6 +22,10 @@ RUN yum -y install wget && \
 # 环境变量
 ENV PATH /opt/zbox:$PATH
 
+# 设置镜像时区为东八区时区，上海
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # 添加挂载点	
 VOLUME /opt/zbox
 

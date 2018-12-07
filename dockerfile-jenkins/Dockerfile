@@ -23,6 +23,10 @@ RUN apt-get update && apt-get install -y wget && \
 # 环境变量 MAVEN_HOME
 ENV MAVEN_HOME /opt/maven
 
+# 设置镜像时区为东八区时区，上海
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Jenkins 插件
 COPY resources/plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
