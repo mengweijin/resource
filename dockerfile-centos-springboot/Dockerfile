@@ -9,6 +9,10 @@ RUN yum -y install wget && \
     wget -c http://mirrors.kernel.org/fedora-epel/epel-release-latest-7.noarch.rpm && \
     rpm -ivh epel-release-latest-7.noarch.rpm && \
     yum -y update && \
+    # 安装中文支持
+    yum -y install kde-l10n-Chinese && yum -y reinstall glibc-common && \
+    # 配置显示中文
+    localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 && \
     # 安装7z工具
     yum -y install p7zip* && \
     # 安装tesseract OCR
@@ -28,6 +32,9 @@ RUN yum -y install wget && \
 # 设置镜像时区为东八区时区，上海
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# 设置环境变量为中文环境
+ENV LC_ALL zh_CN.utf8
 
 #ARG JAR_FILE=myboot-admin.jar
 
