@@ -38,6 +38,8 @@ default-character-set=utf8mb4
 default_authentication_plugin=mysql_native_password
 # 修改mysql默认最大连接数（默认：151）
 max_connections=1000
+# 修改mysql默认CST时区（美国中部）为中国上海东八区时区
+default-time-zone='+08:00'
 #
 # 当二进制日志启用后，这个变量就会启用。它控制是否可以信任存储函数创建者，不会创建写入二进制日志引起不安全事件的存储函数。
 # 如果设置为0（默认值），用户不得创建或修改存储函数，除非它们具有除CREATE ROUTINE或ALTER ROUTINE特权之外的SUPER权限。
