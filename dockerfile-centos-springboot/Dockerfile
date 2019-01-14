@@ -51,4 +51,4 @@ EXPOSE 80
 ENTRYPOINT java -jar /opt/app.jar
 
 # docker build -t mengweijin/centos:latest .
-# docker run --name centos -p 8080:80 --link mysql:mysql -v /opt/myApp-1.0.jar:/opt/app.jar --restart=always -d mengweijin/centos:latest
+# docker run --name centos -p 8080:80 --link mysql:mysql -v /opt/myApp-1.0.jar:/opt/app.jar --restart=always -d mengweijin/centos-springboot:latest
