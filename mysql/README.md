@@ -2,8 +2,6 @@
 
 #### Dockerfile介绍
   mysql 8.0 镜像 时区：上海 东八区时区；编码：utf8mb4
-  
-  DockerHub: https://hub.docker.com/r/mengweijin/mysql/
 
 #### 创建容器
 ```
@@ -16,7 +14,7 @@ docker run \
 -e MYSQL_USER=appmaster \
 -e MYSQL_PASSWORD=appmaster \
 -v /var/lib/mysql/:/var/lib/mysql/ \
--d mengweijin/mysql:latest
+-d registry.cn-hangzhou.aliyuncs.com/mengweijin/mysql:latest
 ```
   
 #### 参数说明

@@ -5,7 +5,12 @@ MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
 USER root
 
-RUN yum -y install wget && \
+# 设置镜像时区为东八区时区，上海
+ENV TZ=Asia/Shanghai
+
+# 设置镜像时区为东八区时区，上海
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    yum -y install wget && \
     wget -c http://mirrors.kernel.org/fedora-epel/epel-release-latest-7.noarch.rpm && \
     rpm -ivh epel-release-latest-7.noarch.rpm && \
     yum -y update && \
@@ -28,10 +33,6 @@ RUN yum -y install wget && \
     yum clean all && \
     # 清理安装临时目录数据
     rm -rf /tmp/*
-
-# 设置镜像时区为东八区时区，上海
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # 设置环境变量为中文环境
 ENV LC_ALL zh_CN.utf8

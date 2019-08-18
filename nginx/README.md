@@ -1,8 +1,6 @@
 # dockerfile-nginx
 nginx 修改镜像时区为东八区时区，上海
 
-Docker Hub: https://hub.docker.com/r/mengweijin/nginx/
-
 #### 创建容器
 ```
 docker run \
@@ -11,7 +9,7 @@ docker run \
 --restart=always \
 # Complex configuration
 # -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro \
--d mengweijin/nginx:latest
+-d registry.cn-hangzhou.aliyuncs.com/mengweijin/nginx:latest
 ```
 
 #### 官方镜像Github

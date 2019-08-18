@@ -1,11 +1,14 @@
 # dockerfile-jenkins
 jenkins(2.138.3) maven(3.5.4) git subversion findbugs checkstyle pmd
 
-Docker Hub: https://hub.docker.com/r/mengweijin/jenkins/
-
 #### 创建容器
-	docker run --name jenkins -p 8082:8080 --restart=always -d mengweijin/jenkins:latest
-	
+```
+docker run \
+--name jenkins \
+-p 8082:8080 \
+--restart=always \
+-d registry.cn-hangzhou.aliyuncs.com/mengweijin/jenkins:latest
+```
 #### 挂载数据卷
 如需映射zentao的数据文件 把容器内对应的文件，拷贝到宿主机，映射即可（如下）
 

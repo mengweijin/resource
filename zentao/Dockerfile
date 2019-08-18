@@ -14,8 +14,13 @@ ARG ZENTAO_URL=http://dl.cnezsoft.com/zentao/11.6/ZenTaoPMS.11.6.stable.zbox_64.
 # ARG ZENTAO_URL=http://dl.cnezsoft.com/zentao/11.6/ZenTaoPMS.11.6.stable.zbox_old.64.tar.gz
 
 USER root
-# 安装
-RUN yum -y install wget && \
+
+# 设置镜像时区为东八区时区，上海
+ENV TZ=Asia/Shanghai
+
+# 安装。设置镜像时区为东八区时区，上海
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    yum -y install wget && \
     # 下载禅道一键安装包到当前目录
     wget -O ${ZENTAO_NAME} ${ZENTAO_URL} && \
     # 解压
@@ -26,11 +31,7 @@ RUN yum -y install wget && \
 # 环境变量
 ENV PATH /opt/zbox:$PATH
 
-# 设置镜像时区为东八区时区，上海
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# 添加挂载点	
+# 添加挂载点
 VOLUME /opt/zbox
 
 # apache服务器默认端口为80
