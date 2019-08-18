@@ -38,8 +38,4 @@ VOLUME /opt/zbox
 EXPOSE 80
 
 # tail -f /dev/null作用：必须存在一个一直运行的前台程序，否则容器启动后会自动停止
-# ENTRYPOINT zbox start && tail -f /dev/null
-
-# 以下来自nginx docker hub文档
-# If you add a custom CMD in the Dockerfile, be sure to include -g daemon off; in the CMD in order for nginx to stay in the foreground, so that Docker can track the process properly (otherwise your container will stop immediately after starting)!
-CMD zbox start -g 'daemon off;'
+ENTRYPOINT zbox start && tail -f /dev/null
