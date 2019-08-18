@@ -4,7 +4,7 @@ FROM nginx
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
 # Hosting some simple static content
-COPY static-html /usr/share/nginx/html
+# COPY static-html /usr/share/nginx/html
 
 # This can also be accomplished more cleanly using a simple Dockerfile (in /host/path/):
 # COPY nginx.conf /etc/nginx/nginx.conf

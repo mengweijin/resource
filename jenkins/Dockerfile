@@ -12,7 +12,7 @@ ARG MAVEN_URL=https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/${MAVEN_
 # 设置镜像时区为东八区时区，上海
 ENV TZ=Asia/Shanghai
 
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     apt-get update && apt-get install -y wget && \
 	# 下载到当前目录
 	wget -O ${MAVEN_NAME} ${MAVEN_URL} && \
