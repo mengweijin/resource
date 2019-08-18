@@ -11,8 +11,8 @@ openrestry 1.15.8.1-1.el7
 ```
 docker run \
 --name openrestry \
--p 80:80 
---restart=always 
+-p 80:80 \
+--restart=always \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/openrestry:latest
 ```
 	
