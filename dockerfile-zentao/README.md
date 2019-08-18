@@ -1,7 +1,7 @@
 # dockerfile-zentao
 
 #### Dockerfile介绍
-  Dockerfile 禅道开源版 10.5
+  Dockerfile 禅道开源版 11.6.stable Linux一键安装包64位（适用于Ubuntu17+，centos7.4+）
   
   DockerHub: https://hub.docker.com/r/mengweijin/zentao/
 
@@ -18,5 +18,4 @@
 
 Linux一键安装参考：https://www.zentao.net/book/zentaopmshelp/90.html
 
-禅道10.5.stable版本更新日志及下载：
-https://www.zentao.net/download/80093.html
+禅道11.6.stable版本更新日志及下载：https://www.zentao.net/download/80153.html
