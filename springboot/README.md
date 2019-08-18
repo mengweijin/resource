@@ -1,4 +1,4 @@
-# dockerfile-centos-springboot
+# springboot
 spring boot应用容器镜像 centos7 openJDK8 7z 
 
 #### Dockerfile介绍

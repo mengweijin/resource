@@ -1,4 +1,4 @@
-# dockerfile-nginx
+# nginx
 nginx 修改镜像时区为东八区时区，上海
 
 #### 创建容器

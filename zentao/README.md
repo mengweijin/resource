@@ -1,4 +1,4 @@
-# dockerfile-zentao
+# zentao
 
 #### Dockerfile介绍
   Dockerfile 禅道开源版 11.6.stable Linux一键安装包64位（适用于Ubuntu17+，centos7.4+）

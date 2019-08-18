@@ -1,4 +1,4 @@
-# dockerfile-jenkins
+# jenkins
 jenkins(2.138.3) maven(3.5.4) git subversion findbugs checkstyle pmd
 
 #### 创建容器
