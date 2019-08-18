@@ -4,7 +4,7 @@ openrestry 1.15.8.1-1.el7
 #### Dockerfile介绍
   openrestry 1.15.8.1-1.el7
   
-  更新Dockerfile时，从这里下载最新版Dockerfile和nginx.conf：
+  更新Dockerfile时，从这里下载最新版Dockerfile、nginx.conf和nginx.vh.default.conf：
   https://github.com/openresty/docker-openresty 
   
 #### 创建容器
