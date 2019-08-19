@@ -13,6 +13,8 @@ docker run \
 --name openrestry \
 -p 80:80 \
 --restart=always \
+-v /etc/nginx/conf.d/:/etc/nginx/conf.d/ \
+-v /etc/nginx/logs/:/usr/local/openresty/nginx/logs/ \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/openrestry:latest
 ```
 	
