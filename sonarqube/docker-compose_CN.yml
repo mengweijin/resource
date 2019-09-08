@@ -2,7 +2,7 @@ version: "3.1"
 
 services:
   sonarqube:
-    image: sonarqube:7.9-community
+    image: registry.cn-hangzhou.aliyuncs.com/mengweijin/sonarqube:latest
     restart: always
     container_name: sonarqube
     hostname: sonarqube

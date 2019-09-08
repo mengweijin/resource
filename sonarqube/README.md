@@ -4,7 +4,7 @@ Dockerfile Github: https://github.com/SonarSource/docker-sonarqube
 
 Docker Hub: https://hub.docker.com/_/sonarqube
 
-中文插件：https://github.com/SonarQubeCommunity/sonar-l10n-zh
+中文插件（注意版本对应）：https://github.com/SonarQubeCommunity/sonar-l10n-zh
 #### docker
 ```
 内嵌数据库方式（此方式不支持数据迁移，一般使用外面的数据库）：
