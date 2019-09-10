@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.17.3
 
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com

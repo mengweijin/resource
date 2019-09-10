@@ -1,5 +1,15 @@
 # jenkins
-jenkins(2.138.3) maven(3.5.4) git subversion findbugs checkstyle pmd
+jenkins(2.194) maven(3.5.4)
+
+https://hub.docker.com/r/jenkins/jenkins
+	
+Jenkins Docker 官方项目参考：https://github.com/jenkinsci/docker
+
+Jenkins Docker 安装官方文档参考：https://github.com/jenkinsci/docker/blob/master/README.md
+
+Jenkins 插件搜索：https://plugins.jenkins.io/
+
+Jenkins 用户文档：https://jenkins.io/doc/
 
 #### 创建容器
 ```
@@ -17,14 +27,7 @@ docker run \
 #### 访问jenkins
 	http://localhost:8082
 	
-	
-Jenkins Docker 官方项目参考：https://github.com/jenkinsci/docker
 
-Jenkins Docker 安装官方文档参考：https://github.com/jenkinsci/docker/blob/master/README.md
-
-Jenkins 插件搜索：https://plugins.jenkins.io/
-
-Jenkins 用户文档：https://jenkins.io/doc/
 
 #### 已安装的插件 Installed plugins:
 	ace-editor:1.1

@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   zoo1:
-    image: 31z4/zookeeper
+    image: zookeeper:3.5
     restart: always
     container_name: zookeep1
     hostname: zoo1
@@ -13,7 +13,7 @@ services:
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
 
   zoo2:
-    image: 31z4/zookeeper
+    image: zookeeper:3.5
     restart: always
     container_name: zookeep2
     hostname: zoo2
@@ -24,7 +24,7 @@ services:
       ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
 
   zoo3:
-    image: 31z4/zookeeper
+    image: zookeeper:3.5
     restart: always
     container_name: zookeep3
     hostname: zoo3

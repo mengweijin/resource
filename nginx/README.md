@@ -12,5 +12,7 @@ docker run \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/nginx:latest
 ```
 
-#### 官方镜像Github
+#### 官方镜像
+https://hub.docker.com/_/nginx
+
 https://github.com/nginxinc/docker-nginx/blob/e3bbc1131a683dabf868268e62b9d3fbd250191b/mainline/buster/Dockerfile

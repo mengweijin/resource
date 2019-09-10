@@ -1,6 +1,7 @@
 # zookeeper
+https://hub.docker.com/_/zookeeper
 
-官方Dockerfile Github: https://github.com/31z4/zookeeper-docker
+https://github.com/31z4/zookeeper-docker/blob/5a82d0b90d055f39d50e0a64ae2e00da15f9b8b1/3.5.5/Dockerfile
   
 #### 创建容器
 ```

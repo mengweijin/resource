@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:2.194
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
 # 使用root用户安装
