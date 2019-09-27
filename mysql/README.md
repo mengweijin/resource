@@ -12,7 +12,6 @@
 docker run \
 --name mysql \
 -p 3306:3306 \
---restart=always \
 -e MYSQL_ROOT_PASSWORD=root \
 -e MYSQL_DATABASE=app_master \
 -e MYSQL_USER=appmaster \

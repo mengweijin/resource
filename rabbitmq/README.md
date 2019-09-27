@@ -13,7 +13,7 @@
 
 docker run \
 --name rabbitmq \
---hostname taskmessage \
+--hostname rabbithost \
 -p 5672:5672 \
 -p 15672:15672 \
 -e RABBITMQ_DEFAULT_USER=admin \

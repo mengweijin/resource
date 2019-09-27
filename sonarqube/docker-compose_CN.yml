@@ -11,16 +11,16 @@ services:
     links:
     - postgres:postgres
     environment:
-      sonar.jdbc.url: jdbc:postgresql://postgres:5432/sonar
+      sonar.jdbc.url: jdbc:postgresql://postgres:5432/postgres
   postgres:
     image: postgres:12
-    restart: always
     container_name: postgres
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: sonar
-      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
 
 
 

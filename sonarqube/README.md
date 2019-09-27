@@ -11,12 +11,13 @@ Docker Hub: https://hub.docker.com/_/sonarqube
 $ docker run -d --name sonarqube -p 9000:9000 sonarqube
 
 单独提供数据库：
-$ docker run -d --name sonarqube \
+$ docker run \
+    --name sonarqube \
     -p 9000:9000 \
     -e sonar.jdbc.username=sonar \
     -e sonar.jdbc.password=sonar \
     -e sonar.jdbc.url=jdbc:postgresql://localhost/sonar \
-    sonarqube
+    -d registry.cn-hangzhou.aliyuncs.com/mengweijin/sonarqube:latest
     
     
 By default you can login as admin with password admin.
@@ -29,6 +30,8 @@ docker-compose.yml
 
 ```
 docker-compose -f docker-compose.yml up -d
+
+删除container：docker-compose down 
 ```
 
 Run docker-compose -f docker-compose.yml up and wait for it to initialize completely. Port 9000 will be exposed.
