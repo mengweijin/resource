@@ -23,7 +23,7 @@ docker run \
 --name confluence \
 -p 8090:8090 \
 -p 8091:8091 \
--d atlassian/confluence-server:7
+-d atlassian/confluence-server:6.4.3
 ```
 
 #### docker compose
