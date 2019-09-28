@@ -10,6 +10,6 @@ ENV TZ=Asia/Shanghai
 COPY crack/atlassian-agent.jar /opt/atlassian/
 
 # 安装。设置镜像时区为东八区时区，上海
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     # 设置启动加载代理包
     echo 'export CATALINA_OPTS="-javaagent:/opt/atlassian/atlassian-agent.jar ${CATALINA_OPTS}"' >> /opt/atlassian/confluence/bin/setenv.sh

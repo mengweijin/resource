@@ -52,7 +52,7 @@ docker restart confluence
 
 #### 程序启动
 ```
-docker logs -f --tail confluence
+docker logs -f confluence
 
 当日志文件中出现了”========= agent working =====”，证明破解程序已经加进去了
 ```
