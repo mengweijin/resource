@@ -17,7 +17,7 @@ docker run \
 -e POSTGRES_DB=postgres \
 -e POSTGRES_USER=postgres \
 -e POSTGRES_PASSWORD=postgres \
--d postgres:12
+-d registry.cn-hangzhou.aliyuncs.com/mengweijin/postgres:latest
 ```
 POSTGRES_DB: This optional environment variable can be used to define a different name for the default database that is created when the image is first started. If it is not specified, then the value of 'POSTGRES_USER' will be used.
 

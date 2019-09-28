@@ -1,0 +1,30 @@
+version: "3.1"
+
+services:
+  confluence:
+    image: atlassian/confluence-server:6.13.0
+    restart: always
+    container_name: confluence
+    hostname: confluence
+    ports:
+      - 8090:8090
+      - 8091:8091
+    links:
+      - postgres:postgres
+    environment:
+      ATL_JDBC_URL: jdbc:postgresql://postgres:5432/confluence
+      ATL_JDBC_USER: confluence
+      ATL_JDBC_PASSWORD: confluence
+      ATL_DB_TYPE: postgresql
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: confluence
+      POSTGRES_USER: confluence
+      POSTGRES_PASSWORD: confluence
+
+
+
