@@ -3,9 +3,15 @@
 #### Dockerfile介绍
   Dockerfile confluence-server
   
+#### 官方镜像（crack不成功）
   https://hub.docker.com/r/atlassian/confluence-server
   
   https://bitbucket.org/atlassian-docker/docker-atlassian-confluence-server/src/master/
+#### 用户镜像
+
+    https://hub.docker.com/r/cptactionhank/atlassian-confluence
+    
+    https://github.com/cptactionhank/docker-atlassian-confluence
   
 #### 创建容器
 ```
@@ -18,12 +24,12 @@ docker run \
 
 
 
-官方镜像仓库：
+基础用户镜像仓库：
 docker run \
 --name confluence \
 -p 8090:8090 \
 -p 8091:8091 \
--d atlassian/confluence-server:6.4.3
+-d cptactionhank/atlassian-confluence:7.0.1
 ```
 
 #### docker compose

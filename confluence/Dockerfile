@@ -1,7 +1,9 @@
 # 基础镜像
-FROM atlassian/confluence-server:6.4.3
+FROM cptactionhank/atlassian-confluence:7.0.1
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
+
+USER root
 
 # 设置镜像时区为东八区时区，上海
 ENV TZ=Asia/Shanghai
