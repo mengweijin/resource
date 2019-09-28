@@ -23,7 +23,7 @@ docker run \
 --name confluence \
 -p 8090:8090 \
 -p 8091:8091 \
--d atlassian/confluence-server:6.13.0
+-d atlassian/confluence-server:7
 ```
 
 #### docker compose
@@ -69,7 +69,7 @@ docker logs -f confluence
 java -jar atlassian-agent.jar -p jira -d -m admin@admin.com -n my_name -o http://127.0.0.1 -s {ServerID}
 
 生成 confluence 许可命令参照如下：
-java -jar atlassian-agent.jar -p conf  -d -m admin@admin.com -n my_name -o http://127.0.0.1 -s {ServerID}
+java -jar atlassian-agent.jar -p conf -d -m admin@admin.com -n my_name -o http://127.0.0.1 -s {ServerID}
 
 如果上个页面中也选择了安装团队日程表，则可执行下面的命令获得授权码：
 java -jar atlassian-agent.jar -p tc -m admin@admin.com -n my_name -o http://127.0.0.1 -s {ServerID}
