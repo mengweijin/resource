@@ -1,5 +1,5 @@
 # 基础镜像
-FROM atlassian/confluence-server:7
+FROM atlassian/confluence-server:6.15
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 

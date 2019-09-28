@@ -23,7 +23,7 @@ docker run \
 --name confluence \
 -p 8090:8090 \
 -p 8091:8091 \
--d atlassian/confluence-server:7
+-d atlassian/confluence-server:6.15
 ```
 
 #### docker compose
@@ -33,6 +33,8 @@ docker-compose.yml
 docker-compose -f docker-compose.yml up -d
 
 删除container：docker-compose down 
+
+注意数据库版本支持：https://confluence.atlassian.com/doc/supported-platforms-207488198.html#SupportedPlatforms-Databases
 ```
 
 #### 访问

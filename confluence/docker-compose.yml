@@ -17,7 +17,8 @@ services:
       ATL_JDBC_PASSWORD: confluence
       ATL_DB_TYPE: postgresql
   postgres:
-    image: postgres:12
+    # confluence官方支持postgres的版本：9.4，9.5，9.6
+    image: postgres:9
     container_name: postgres
     ports:
       - 5432:5432
