@@ -13,6 +13,7 @@ $ docker run -d --name sonarqube -p 9000:9000 sonarqube
 单独提供数据库：
 $ docker run \
     --name sonarqube \
+    --restart=always \
     -p 9000:9000 \
     -e sonar.jdbc.username=sonar \
     -e sonar.jdbc.password=sonar \

@@ -14,6 +14,7 @@ services:
   postgres:
     # confluence官方支持postgres的版本：9.4，9.5，9.6
     image: postgres:9
+    restart: always
     container_name: postgres
     ports:
       - 5432:5432

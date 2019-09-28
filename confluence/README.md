@@ -19,6 +19,7 @@
 
 docker run \
 --name confluence \
+--restart=always \
 -p 8090:8090 \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/confluence:latest
 
@@ -27,6 +28,7 @@ docker run \
 基础用户镜像仓库：
 docker run \
 --name confluence \
+--restart=always \
 -p 8090:8090 \
 -p 8091:8091 \
 -d cptactionhank/atlassian-confluence:7.0.1
