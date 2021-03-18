@@ -35,3 +35,6 @@ CMD /bin/bash
 # docker build -t mengweijin/centos:latest .
 # 只有下面这样启动（加上了 -i -t 参数），才不会启动之后立马退出。如果需要映射端口：-p 本地8080:容器8080
 # docker run --name centos -d -i -t mengweijin/centos:latest
+
+# 从宿主机复制文件到容器
+# docker cp C:\aaa.jar centos:/home
