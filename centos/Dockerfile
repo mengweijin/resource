@@ -9,7 +9,6 @@ ENV TZ=Asia/Shanghai
 # 设置镜像时区为东八区时区，上海
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     yum -y update && \
-    yum clean all && \
     yum -y install wget && \
     yum -y install vim && \
     # Apache Bench 压测工具
@@ -22,7 +21,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     yum -y install java-1.8.0-openjdk && \
     # 安装open jdk
     yum -y install java-1.8.0-openjdk-devel && \
-    # 再次清理安装数据
+    # 清理yum缓存。yum 会把下载的软件包和header存储在cache中，而不自动删除。
     yum clean all && \
     # 清理安装临时目录数据
     rm -rf /tmp/*
@@ -34,7 +33,7 @@ CMD /bin/bash
 
 # docker build -t mengweijin/centos:latest .
 # 只有下面这样启动（加上了 -i -t 参数），才不会启动之后立马退出。如果需要映射端口：-p 本地8080:容器8080
-# docker run --name centos -d -i -t mengweijin/centos:latest
+# docker run --name centos -d -i -t registry.cn-hangzhou.aliyuncs.com/mengweijin/centos:latest
 
 # 从宿主机复制文件到容器
 # docker cp C:\aaa.jar centos:/home
