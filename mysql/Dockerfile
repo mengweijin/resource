@@ -1,5 +1,5 @@
 # 基础镜像
-FROM mysql:8.0
+FROM mysql:8
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 

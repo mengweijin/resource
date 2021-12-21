@@ -1,7 +1,7 @@
 # mysql
 
 #### Dockerfile介绍
-  mysql 8.0 镜像 时区：上海 东八区时区；编码：utf8mb4
+  mysql 8.0 镜像 时区：上海 东八区时区；编码：utf8
   
   https://hub.docker.com/_/mysql
   
@@ -27,11 +27,11 @@ docker run \
 -v /var/lib/mysql/:/var/lib/mysql/：挂载卷/var/lib/mysql/
 
 #### 可选参数
--e MYSQL_DATABASE=myboot_master \：创建一个名为 app_master 的数据库
+-e MYSQL_DATABASE=app_master \：创建一个名为 app_master 的数据库
 
--e MYSQL_USER=myboot \：指定 app_master  appmaster ，该用户对当前数据库拥有所有权限
+-e MYSQL_USER=appmaster \：指定 app_master  appmaster ，该用户对当前数据库拥有所有权限
 
--e MYSQL_PASSWORD=myboot \：指定 app_master 数据库的 appmaster 用户的密码为 appmaster
+-e MYSQL_PASSWORD=appmaster \：指定 app_master 数据库的 appmaster 用户的密码为 appmaster
 
 #### 创建数据库、用户并授权
 ```
@@ -50,7 +50,7 @@ mysql> grant all privileges on test_database.* to 'joe'@'localhost' identified b
 mysql> flush privileges;
 ```
 
-#### 编码说明：当前镜像使用utf8mb4编码
+#### 编码说明：当前镜像使用utf8编码
 
 #### 注意：当前镜像修改了默认身份验证插件为 mysql_native_password 以兼容客户端工具的连接。
 

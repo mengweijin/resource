@@ -26,11 +26,12 @@
 # For explanations see
 # http://dev.mysql.com/doc/mysql/en/server-system-variables.html
 
+# 只有存储表情时，才需要 utf8mb4 编码。可以在表级别设置。因此默认改为 utf8 编码。
 [mysql]
-default-character-set=utf8mb4
+default-character-set=utf8
 
 [client]
-default-character-set=utf8mb4
+default-character-set=utf8
 
 [mysqld]
 # 修改默认密码验证方式插件，以兼容navicat等不支持caching_sha2_password验证方式的客户端工具，
