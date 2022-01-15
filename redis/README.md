@@ -10,7 +10,7 @@ https://zhuanlan.zhihu.com/p/62957397
 docker run --name redis -p 6379:6379 -d redis:latest
 
 docker run --name redis -p 6379:6379 -d redis:latest --requirepass "密码"
-docker run --name redis -p 6379:6379 -d redis:latest --requirepass 123456
+docker run --name redis --restart=always -p 6379:6379 -d redis:latest --requirepass 123456
 ```
   
 #### 连接、查看redis容器
