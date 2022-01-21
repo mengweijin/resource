@@ -1,7 +1,7 @@
 # mysql
 
 #### Dockerfile介绍
-  mysql 8.0 镜像 时区：上海 东八区时区；编码：utf8
+  mysql 8.0 镜像 时区：上海 东八区时区；编码：utf8mb4
   
   https://hub.docker.com/_/mysql
   
