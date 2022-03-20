@@ -1,5 +1,5 @@
 # 基础镜像
-FROM linuxserver/qbittorrent:latest
+FROM linuxserver/qbittorrent:4.4.0
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
