@@ -21,7 +21,7 @@ ulimit -u 4096
 #### docker
 ```
 # 内嵌数据库方式（此方式不支持数据迁移，一般使用外面的数据库）：
-docker run -d --name sonarqube -p 9000:9000 sonarqube
+docker run -d --name sonarqube --restart=always -p 9000:9000 sonarqube
 
 # 单独提供数据库：
 docker run \
