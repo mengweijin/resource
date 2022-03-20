@@ -19,7 +19,8 @@ docker run -d \
   -p 8080:8080 \
   -v /app/qbittorrent/config:/config \
   -v /app/qbittorrent/downloads:/downloads \
-  lscr.io/linuxserver/qbittorrent:latest
+  --restart unless-stopped \
+  linuxserver/qbittorrent:latest
 
 ```
 登录：http://120.48.10.185:8080
