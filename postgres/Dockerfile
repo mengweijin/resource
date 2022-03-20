@@ -1,5 +1,5 @@
 # 基础镜像
-FROM postgres:12
+FROM postgres:14
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
