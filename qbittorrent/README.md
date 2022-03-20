@@ -2,7 +2,9 @@
 
 #### Dockerfile介绍
 
-https://github.com/linuxserver/docker-qbittorrent
+[https://hub.docker.com/r/linuxserver/qbittorrent](https://hub.docker.com/r/linuxserver/qbittorrent)
+
+[https://github.com/linuxserver/docker-qbittorrent](https://github.com/linuxserver/docker-qbittorrent)
   
 #### 创建容器（原始镜像）
 ```bash

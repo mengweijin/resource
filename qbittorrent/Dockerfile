@@ -1,5 +1,5 @@
 # 基础镜像
-FROM lscr.io/linuxserver/qbittorrent:latest
+FROM linuxserver/qbittorrent:latest
 # 维护者信息
 MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 
