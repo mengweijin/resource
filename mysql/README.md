@@ -18,7 +18,7 @@ docker run \
 -e MYSQL_USER=appmaster \
 -e MYSQL_PASSWORD=appmaster \
 -v /var/lib/mysql/:/var/lib/mysql/ \
--d registry.cn-hangzhou.aliyuncs.com/mengweijin/mysql:latest
+-d registry.cn-hangzhou.aliyuncs.com/mengweijin/mysql:8
 ```
   
 #### 参数说明
