@@ -13,5 +13,6 @@ MAINTAINER Meng Wei Jin mengweijin.work@foxmail.com
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+ENV LANG C.UTF-8
 # 设置环境变量为中文环境
 ENV LC_ALL zh_CN.utf8
