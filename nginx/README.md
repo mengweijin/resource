@@ -8,7 +8,7 @@ nginx 修改镜像时区为东八区时区，上海
 # 或者使用下面两个 -e 参数来防止中文乱码
 docker run \
 --name nginx \
--p 8083:80 \
+-p 80:80 \
 -e LANG=C.UTF-8 \
 -e LC_ALL=C.UTF-8 \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/nginx:latest
@@ -26,10 +26,16 @@ docker cp nginx:/usr/share/nginx/html/ /app/nginx/
 docker cp nginx:/var/log/nginx /app/nginx/log
 ```
 
+#### 删除原有的容器
+```bash
+docker rm -f nginx
+```
+
+#### 重新启动 nginx
 ```bash
 docker run \
 --name nginx \
--p 8083:80 \
+-p 80:80 \
 --restart=always \
 -v /app/nginx/conf.d/:/etc/nginx/conf.d/ \
 -v /app/nginx/nginx.conf:/etc/nginx/nginx.conf \
@@ -37,6 +43,8 @@ docker run \
 -v /app/nginx/log/:/var/log/nginx/ \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/nginx:latest
 ```
+
+访问：http://localhost:80
 
 #### 官方镜像
 https://hub.docker.com/_/nginx
