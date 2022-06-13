@@ -14,11 +14,6 @@ docker run \
 -d registry.cn-hangzhou.aliyuncs.com/mengweijin/nginx:latest
 ```
 
-#### 在主机 /app 目录下创建挂载目录
-```bash
-mkdir -p /app/nginx/{conf.d,html,logs} 
-```
-
 #### 将容器内的配置文件和文件夹复制到宿主机
 ```bash
 ##导入的配置文件目录
