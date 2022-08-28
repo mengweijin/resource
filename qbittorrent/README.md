@@ -23,7 +23,9 @@ docker run -d \
   linuxserver/qbittorrent:latest
 
 ```
-登录：http://120.48.10.185:8080
+登录：http://localhost:8080  
+
+admin/adminadmin
 
 The webui is at <your-ip>:8080 and the default username/password is admin/adminadmin.
 
@@ -36,10 +38,10 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Shanghai \
-  -e WEBUI_PORT=8080 \
+  -e WEBUI_PORT=7000 \
   -p 6881:6881 \
   -p 6881:6881/udp \
-  -p 8080:8080 \
+  -p 7000:7000 \
   -v /app/qbittorrent/config:/config \
   -v /app/qbittorrent/downloads:/downloads \
   registry.cn-hangzhou.aliyuncs.com/mengweijin/qbittorrent:latest
