@@ -1,0 +1,39 @@
+serverAddr = "home.aday.fun"
+serverPort = 13600
+
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 13601
+# localIP 和 localPort 配置为需要从公网访问的内网 ssh 服务的地址和端口。
+# remotePort 表示在 frp 服务端监听的端口，访问此端口的流量将被转发到本地服务的相应 ssh 端口。
+
+[[proxies]]
+name = "nginx"
+type = "http"
+localPort = 80
+customDomains = ["a.aday.fun"]
+
+[[proxies]]
+name = "vitality"
+type = "http"
+localPort = 8080
+customDomains = ["b.aday.fun"]
+
+# https
+[[proxies]]
+name = "test_htts2http"
+type = "https"
+customDomains = ["c.aday.fun"]
+
+[proxies.plugin]
+type = "https2http"
+localAddr = "127.0.0.1:80"
+
+# HTTPS 证书相关的配置
+crtPath = "./server.crt"
+keyPath = "./server.key"
+hostHeaderRewrite = "127.0.0.1"
+requestHeaders.set.x-from-where = "frp"

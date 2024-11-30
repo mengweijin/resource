@@ -20,12 +20,16 @@ docker run -d \
   -v /app/qbittorrent/config:/config \
   -v /app/qbittorrent/downloads:/downloads \
   --restart unless-stopped \
-  linuxserver/qbittorrent:latest
+  linuxserver/qbittorrent:4.6.7
 
 ```
 登录：http://localhost:8080  
 
-admin/adminadmin
+默认用户名/密码：admin/adminadmin
+
+从某个版本开始，密码默认启动容器时随机生成一个，并打印在启动日志中。
+
+查看日志：docker logs qbittorrent
 
 The webui is at <your-ip>:8080 and the default username/password is admin/adminadmin.
 
@@ -44,5 +48,5 @@ docker run -d \
   -p 7000:7000 \
   -v /app/qbittorrent/config:/config \
   -v /app/qbittorrent/downloads:/downloads \
-  registry.cn-hangzhou.aliyuncs.com/mengweijin/qbittorrent:latest
+  registry.cn-hangzhou.aliyuncs.com/mengweijin/qbittorrent:4.6.7
 ```
